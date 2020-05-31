@@ -51,8 +51,6 @@ impl<S, A, T: Controller<S, A>> Controller<S, A> for Shared<T> {
 }
 
 pub trait OnlineController<S, A> {
-    fn handle_setup(&mut self);
-
     /// Sample the target policy for a given state `s`.
     fn sample_target(&mut self, rng: &mut impl Rng, s: &S) -> A;
 
@@ -67,8 +65,6 @@ impl<O, A, C> OnlineController<O, A> for C
 where
     C: Controller<O, A>,
 {
-    fn handle_setup(&mut self) {}
-
     fn sample_target(&mut self, rng: &mut impl Rng, s: &O) -> A {
         Controller::sample_target(self, rng, s)
     }

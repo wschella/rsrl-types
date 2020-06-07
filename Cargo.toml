@@ -9,4 +9,4 @@ edition = "2018"
 [dependencies]
 rand = "0.7.3"
 
-spaces = { git = "https://github.com/wschella/spaces.git"}
+spaces = { git = "https://github.com/wschella/spaces.git", rev = "cf225df"}

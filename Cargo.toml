@@ -9,4 +9,4 @@ edition = "2018"
 [dependencies]
 rand = "0.7.3"
 
-spaces = { path = "../spaces", package = "spaces" }
+spaces = { git = "https://github.com/wschella/spaces.git"}
